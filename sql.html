@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sericle — SQL viewer</title>
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;max-width:1000px;margin:28px auto;color:#0f172a}
+      header{display:flex;align-items:center;gap:12px}
+      h1{font-size:20px;margin:0}
+      p{color:#475569}
+      .container{padding:18px;border:1px solid #e2e8f0;border-radius:8px;background:#fbfdff}
+      details{margin:12px 0;border:1px solid #e6eef6;border-radius:6px;padding:8px;background:#fff}
+      summary{font-weight:600;cursor:pointer}
+      pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;color:#e6f2ff;padding:12px;border-radius:6px;overflow:auto}
+      .loading{color:#64748b}
+      a{color:#0ea5e9}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="4" fill="#0ea5e9" />
+          <text x="12" y="16" text-anchor="middle" font-size="12" font-family="monospace" fill="#fff">SQL</text>
+        </svg>
+        <div>
+          <h1>Sericle — SQL viewer</h1>
+          <p>Click a file to expand and view its SQL content inline. Files are fetched from the repository's raw URLs.</p>
+        </div>
+      </header>
+
+      <main id="files"></main>
+
+      <p style="margin-top:18px;color:#64748b;font-size:14px">Tip: use the raw link in each file to copy/paste into Supabase. To publish this viewer as a site, move these files into <code>docs/</code> or enable GitHub Pages for the repo.</p>
+    </div>
+
+    <script src="/js/sql-viewer.js"></script>
+  </body>
+</html>
