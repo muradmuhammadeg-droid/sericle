@@ -8,9 +8,15 @@
 </head>
 <body>
   <div id="app">
-    <header><h1>Sericle</h1></header>
+    <header>
+      <h1>Sericle</h1>
+      <div id="auth">
+        <button id="loginBtn">Log in with GitHub</button>
+        <button id="logoutBtn" style="display:none">Log out</button>
+      </div>
+    </header>
     <section id="composer">
-      <input id="author" placeholder="Your name" />
+      <input id="author" placeholder="Your name" disabled />
       <textarea id="content" placeholder="What's on your mind?"></textarea>
       <button id="postBtn">Post</button>
     </section>
