@@ -8,7 +8,7 @@ const sqlite = require('sqlite');
 const bodyParser = require('body-parser');
 
 (async function(){
-  const db = await sqlite.open({ filename: 'sericle.db', driver: sqlite3.Database });
+  const db = await sqlite.open({ filename: 'memory.db', driver: sqlite3.Database });
   await db.exec(`CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, github_id TEXT UNIQUE, username TEXT, displayName TEXT, avatar TEXT, createdAt TEXT);
   CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY, author_id INTEGER, author_name TEXT, content TEXT, createdAt TEXT);
   CREATE TABLE IF NOT EXISTS likes (id INTEGER PRIMARY KEY, user_id INTEGER, post_id INTEGER, createdAt TEXT, UNIQUE(user_id, post_id));
